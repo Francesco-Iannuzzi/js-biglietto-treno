@@ -35,12 +35,16 @@ console.log(price);
 
 //verificare se l'utente ha un'età inferiore ai 18 anni ed applicare lo sconto del 20% o se l'utente ha un'età superiore ai 65 anni ed applicare lo sconto del 40% altrimenti non applicare nessuno sconto (dare un prezzo con massimo due numeri decimali)
 if (userAge < 18) {
-    price = price - (price * 0.20).toFixed();
-    
+    price = price - (price * 0.20).toFixed(2);
+    console.log(price)
+
 } else if (userAge > 65) {
-    price = price - (price * 0.40).toFixed();
+    price = price - (price * 0.40).toFixed(2);
+    console.log(price)
+
 } else {
-    price = price
+    price = price.toFixed(2)
+    console.log(price)
 }
 
 //aggiungere un h1 con id per mostrare il prezzo in schermata
