@@ -12,7 +12,7 @@ Questo richiederà un minimo di ricerca.
     - number() prompt
     - const / let
     - console-log
-    - math
+    - .toFixed()
     - if / else
     - getElementById
 */
@@ -33,19 +33,18 @@ console.log(pricePerKilometre);
 let price = kilometres * pricePerKilometre;
 console.log(price);
 
-//verificare se l'utente ha un'età inferiore ai 18 anni ed applicare lo sconto del 20% o se l'utente ha un'età superiore ai 65 anni ed applicare lo sconto del 40% altrimenti non applicare nessuno sconto (dare un prezzo con massimo due numeri decimali)
+//verificare se l'utente ha un'età inferiore ai 18 anni ed applicare lo sconto del 20% o se l'utente ha un'età superiore ai 65 anni ed applicare lo sconto del 40%
 if (userAge < 18) {
-    price = price - (price * 0.20).toFixed(2);
-    console.log(price)
+    price -= (price * 0.20);
+    console.log(price);
 
 } else if (userAge > 65) {
-    price = price - (price * 0.40).toFixed(2);
-    console.log(price)
-
-} else {
-    price = price.toFixed(2)
+    price -= (price * 0.40);
     console.log(price)
 }
+
+// transformare il prezzo in modo che abbia un massimo di due numeri decimali
+price = price.toFixed(2)
 
 //aggiungere un h1 con id per mostrare il prezzo in schermata
 
