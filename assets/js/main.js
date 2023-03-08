@@ -40,16 +40,16 @@ if (userAge < 18) {
 
 } else if (userAge > 65) {
     price -= (price * 0.40);
-    console.log(price)
+    console.log(price);
 }
 
 // transformare il prezzo in modo che abbia un massimo di due numeri decimali
-price = price.toFixed(2)
+price = price.toFixed(2);
 
 //aggiungere un h1 con id per mostrare il prezzo in schermata
 
 //selezionare e salvare in una variabile l'elemento della dom con getElementById
-const nameElement = document.getElementById('finalPrice')
+const nameElement = document.getElementById('finalPrice');
 
 //comunicare all'utente il costo del biglietto
 nameElement.innerHTML=`Il prezzo per il tuo biglietto è di ${price} euro`;
